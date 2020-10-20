@@ -34,5 +34,5 @@ function copyClipboard(){
     clipboard.select();
     clipboard.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    alert("Copiado en portapapeles");
+    alert("Copied in clipboard!");
 }
