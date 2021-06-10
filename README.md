@@ -17,3 +17,7 @@
 ## Screenshots📸
 
 ![Screenshot](Screenshot.png)
+
+## Prueba 🎮
+
+[Click aqui](https://juan-chapur.github.io/PascalCase-To-Text/) para probar :D
