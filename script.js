@@ -10,7 +10,7 @@ function prepareText(text) {
     const regExpForDigits = /\d{1,}/g;
     const regExpForparenthesis = /\(|\)/g;
 
-    //  $8 es el contenido encontrado
+    //  $& es el contenido encontrado
     const spaceBetweenWords = text.replace(regExpForWords, ' $&');
     const spaceBetweenDigitsAndWords = spaceBetweenWords.replace(regExpForDigits, ' $&');
     const spaceBetweenparenthesis = spaceBetweenDigitsAndWords.replace(regExpForparenthesis, ' $&');
@@ -37,10 +37,10 @@ function sendText() {
 }
 
 //  Esta funcion fue creada para copiar en el portapapeles el texto procesado
-function copyClipboard(){
-    const clipboard = document.getElementById("modifiedText");
-    clipboard.select();
-    clipboard.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    alert("Copied in clipboard!");
+function copyClipboard() {
+    //  Tomo el texto ingresado por el campo correspondiente
+    const text = document.getElementById("modifiedText").value;
+
+    //  Copio el texto procesado en el portapapeles
+    navigator.clipboard.writeText(text);
 }
